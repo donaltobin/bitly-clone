@@ -1,2 +1,10 @@
-<h1>Hello World</h1>
-<p>See Me in views/static/index.html.erb</p>
+<form action='/urls' method = "post">
+	Enter URL:
+	<input type = "text" name = "long_url">
+	<input type = "submit" value = "Submit">
+</form>
+
+
+<% @urls.each do |url| %>
+	<li> <%= "Original URL:" %> <%= url.long_url %> <%= "Shortened URL:" %> <%= url.short_url %> <%= "Click count:" %> <%= url.click_count %> </li>
+<%end%>
