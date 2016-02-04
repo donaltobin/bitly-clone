@@ -1,0 +1,75 @@
+.welcome h1, .welcome {
+	background-color: rgb(32, 57, 173);
+    font-size: 150%;
+	padding: 1%;
+	font-family: courier;
+	color: black;
+	margin: 0;
+	text-align: center;
+}
+
+.form {
+	background-color: rgb(58, 76, 162);
+	font-family: courier;
+	color: black;
+	margin: 0;
+	padding: 1%;
+}
+
+h2 {
+	font-size: 300%;
+}
+
+.url {
+	border-radius: 10px;
+	height: 6%;
+	width: 30%
+
+
+}
+
+.enter {
+	border-radius: 10px;
+	width: 20%;
+	height: 6%;
+	font-size: 150%;
+	background-color: red;
+	font-weight: bold;
+}
+
+.boom {
+	font-weight: bold;
+	font-size: 120%;
+	color: black;
+}
+
+.color-table {
+	background-color: rgb(32, 57, 173);
+}
+
+.color-table tr th, tr td {
+	color: black;
+	text-align: center;
+	border: 0px;
+}
+
+.color-table table {
+	width: 55%;
+	margin: 0px auto;
+}
+
+.background {
+	background-color: rgb(32, 57, 173);
+}
+
+.error-page {
+	color: black;
+	text-align: center;
+	font-size: 130%;
+}
+
+
+
+
+
+

@@ -1,10 +1,40 @@
-<form action='/urls' method = "post">
-	Enter URL:
-	<input type = "text" name = "long_url">
-	<input type = "submit" value = "Submit">
-</form>
 
+	<div class = 'form'>
+		<center>
+			<form action='/create' method = "post">
+				<hr>
+				<h2>Enter URL:</h2>
+					<p>
+					<input class = "url" type="text" name="long_url", placeholder="Enter URL here...">
+					</p>
+					<input class = "enter" type = "submit" value = "Shortly it!">
+					<hr>
+			</form>
+		</center>
+	</div>
 
-<% @urls.each do |url| %>
-	<li> <%= "Original URL:" %> <%= url.long_url %> <%= "Shortened URL:" %> <%= url.short_url %> <%= "Click count:" %> <%= url.click_count %> </li>
-<%end%>
+	<div class ="color-table">
+		<br />
+			<center>
+				<p class = "boom" >
+				Previously Shortened URLs:
+				</p>
+			</center>
+
+		  <table>
+		  	<tr>
+					<th><%= "Original URL" %></th>
+					<th><%= "Shortened URL" %></th>
+					<th><%= "Click count" %></th>
+			</tr>
+
+					<% @urls.each do |url| %>
+					<tr>
+						<td><a href="<%=url.long_url %>"><%=url.long_url %></td></a>
+						<td><a href="<%= url.short_url %>"><%= url.short_url %></a></td>
+						<td><a><%= url.click_count %></a></td>
+					</tr>
+					<%end%>
+		  </table>
+	</div>
+
