@@ -9,7 +9,7 @@ post '/create' do
 
 	x = Url.new(long_url: params[:long_url], click_count: 0)
 	if x.save
-		redirect '/'
+		x.to_json
 	else 
 		redirect '/static/error'
 	end

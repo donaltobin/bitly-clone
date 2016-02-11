@@ -68,6 +68,23 @@ h2 {
 	font-size: 130%;
 }
 
+.hide-row {}
+
+.slide {}
+
+.button{
+	background-color: rgb(32, 57, 173);
+	border-radius: 20%;
+	border-color: rgb(58, 76, 162);
+	border-width: 1.5px;
+	border-style: solid;
+}
+
+.display_shorturl {
+	font-size: 150%;
+	padding: 1%;
+}
+
 
 
 

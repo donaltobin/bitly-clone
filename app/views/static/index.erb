@@ -1,13 +1,15 @@
 
 	<div class = 'form'>
 		<center>
-			<form action='/create' method = "post">
+			<form id ="formid" action='/create' method = "post">
 				<hr>
 				<h2>Enter URL:</h2>
 					<p>
 					<input class = "url" type="text" name="long_url", placeholder="Enter URL here...">
 					</p>
 					<input class = "enter" type = "submit" value = "Shortly it!">
+					<div class = "display_shorturl">
+					</div>
 					<hr>
 			</form>
 		</center>
@@ -26,13 +28,16 @@
 					<th><%= "Original URL" %></th>
 					<th><%= "Shortened URL" %></th>
 					<th><%= "Click count" %></th>
+					<th><%= "" %></th>
+
 			</tr>
 
 					<% @urls.each do |url| %>
-					<tr>
-						<td><a href="<%=url.long_url %>"><%=url.long_url %></td></a>
+					<tr id="url_<%= url.id%>">
+						<td><a href="https://<%=url.long_url %>"><%=url.long_url %></a></td>
 						<td><a href="<%= url.short_url %>"><%= url.short_url %></a></td>
 						<td><a><%= url.click_count %></a></td>
+						<td><button class = "button" url_id="url_<%= url.id%>">Delete</button></td>
 					</tr>
 					<%end%>
 		  </table>
